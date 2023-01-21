@@ -1,56 +1,66 @@
 # PostgreSQL Cheat Sheet
 
-##### Get Help
+#### Get Help
 ```sql
 \?
 ```
 
-##### Show Databases
+
+#### Show Databases
 ```sql
 \l
 ```
 
-##### Create Database
+
+#### Create Database
 ```sql
 CREATE DATABASE database_name;
 ```
 
-##### Delete Database
+
+#### Delete / Drop Database
 ```sql
 DROP DATABASE database_name;
 ```
 
-##### Select Database
+
+#### Select Database
 ```sql
 \c database_name;
 ```
 
-##### Create Table
+
+#### Create Table
 ```sql
 CREATE TABLE table_name(
   column_name TYPE column_constraints,
 );
 ```
 
-##### Delete / Drop Table
+
+#### Delete / Drop Table
 ```sql
 DROP TABLE table_name;
 ```
 
-##### Show Tables
+
+#### Show Tables
 ```sql
 \d
 ```
 
-##### Show Table Schemas
+
+#### Show Table Schemas
 ```
 \d table_name
 ```
+
 
 ## Add New Column
 ```sql
 ALTER TABLE table_name ADD new_column column_constraints;
 ```
+
 
 ## Drop Column
 ```sql
@@ -58,3 +68,14 @@ ALTER TABLE table_name Drop COLUMN column_name;
 ```
 
 
+#### Insert Row / Record
+```sql
+INSERT INTO table_name (column1, column2, ...) values (value1, value2, ...);
+```
+
+
+#### Select
+```sql
+SELECT * FROM table_name;
+SELECT column1, column2 FROM table_name;
+```
