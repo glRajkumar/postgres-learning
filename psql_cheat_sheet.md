@@ -78,4 +78,17 @@ INSERT INTO table_name (column1, column2, ...) values (value1, value2, ...);
 ```sql
 SELECT * FROM table_name;
 SELECT column1, column2 FROM table_name;
+SELECT * FROM table_name WHERE some_constraints;
+```
+
+
+#### Update Row
+```sql
+UPDATE table_name SET row_feild = new_value WHERE some_constraints;
+```
+
+
+#### Delete Row
+```sql
+DELETE FROM table_name WHERE some_constraints;
 ```
