@@ -1,0 +1,37 @@
+@host = http://localhost:5000/restaurants
+
+
+### get all restaurants
+GET {{host}}
+
+
+### get specific restaurant by id
+GET {{host}}/3
+
+
+### create restaurant
+POST {{host}}
+Content-Type: application/json
+
+{
+  "name": "first", 
+  "location": "checnnai", 
+  "price": "2"
+}
+
+
+### update restaurant
+PUT {{host}}
+Content-Type: application/json
+
+{
+  "id": "3",
+  "name": "new data", 
+  "price": "3",
+  "location": "Salem"
+}
+
+
+### delete restaurant 
+DELETE {{host}}/6
+

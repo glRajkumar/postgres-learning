@@ -20,5 +20,9 @@ pool.connect()
   .catch(e => console.log("err", e))
 
 module.exports = {
-  query: (text, params) => pool.query(text, params),
+  query: (text, params) => {
+    console.log(text)
+    console.log(params)
+    return pool.query(text, params)
+  },
 }

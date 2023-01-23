@@ -9,6 +9,10 @@ app.use(cors())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
+const restaurants = require('./controllers/restaurants')
+
+app.use("/restaurants", restaurants)
+
 app.use((req, res, next) => {
   const error = new Error('Not Found')
   error.status = 404
