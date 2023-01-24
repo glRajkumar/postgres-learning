@@ -10,8 +10,10 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 const restaurants = require('./controllers/restaurants')
+const reviews = require('./controllers/reviews')
 
 app.use("/restaurants", restaurants)
+app.use("/reviews", reviews)
 
 app.use((req, res, next) => {
   const error = new Error('Not Found')

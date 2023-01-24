@@ -1,0 +1,7 @@
+@host = http://localhost:5000/reviews
+
+
+### get all reviews
+GET {{host}}
+
+

@@ -4,7 +4,12 @@ const { query } = require('../db')
 const router = express.Router()
 
 // table creations
-// const qTxt = "CREATE TABLE restaurants (id BIGSERIAL NOT NULL, name VARCHAR(50) NOT NULL, location VARCHAR(50) NOT NULL, price INT NOT NULL);"
+// CREATE TABLE restaurants (
+//   id BIGSERIAL NOT NULL PRIMARY KEY, 
+//   name VARCHAR(50) NOT NULL, 
+//   location VARCHAR(50) NOT NULL, 
+//   price INT NOT NULL
+// );
 
 router.get("/", async (req, res) => {
   try {
