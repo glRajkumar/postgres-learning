@@ -14,9 +14,9 @@ POST {{host}}
 Content-Type: application/json
 
 {
-  "name": "first", 
-  "location": "checnnai", 
-  "price": "2"
+  "name": "AVA", 
+  "location": "Checnnai", 
+  "price": "100"
 }
 
 

@@ -5,3 +5,13 @@
 GET {{host}}
 
 
+### create reviews
+POST {{host}}
+Content-Type: application/json
+
+{
+  "restaurant_id": "1",
+  "name": "Raj kumar", 
+  "body": "Average", 
+  "rating": 2
+}
