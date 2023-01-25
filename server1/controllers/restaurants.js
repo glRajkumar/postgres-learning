@@ -35,6 +35,32 @@ router.get("/:id", async (req, res) => {
   }
 })
 
+router.get("/skip/:offset/limit/:limit", async (req, res) => {
+  const { offset, limit } = req.params
+
+  try {
+    const qTxt = "SELECT * FROM restaurants OFFSET $1 LIMIT $2"
+    const { rows } = await query(qTxt, [offset, limit])
+    res.send(rows)
+
+  } catch (err) {
+    res.status(400).json({ err, msg: "" })
+  }
+})
+
+router.get("/search/:by", async (req, res) => {
+  const { by } = req.params
+
+  try {
+    const qTxt = "SELECT * FROM restaurants WHERE name LIKE $1"
+    const { rows } = await query(qTxt, [`%${by}%`])
+    res.send(rows)
+
+  } catch (err) {
+    res.status(400).json({ err, msg: "" })
+  }
+})
+
 router.post("/", async (req, res) => {
   const { name, location, price } = req.body
 

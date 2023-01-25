@@ -9,13 +9,21 @@ GET {{host}}
 GET {{host}}/3
 
 
+### get restaurants by ceratin limit with some start point
+GET {{host}}/skip/3/limit/2
+
+
+### get restaurants by name
+GET {{host}}/search/an
+
+
 ### create restaurant
 POST {{host}}
 Content-Type: application/json
 
 {
-  "name": "AVA", 
-  "location": "Checnnai", 
+  "name": "Maha", 
+  "location": "Paandi", 
   "price": "100"
 }
 
