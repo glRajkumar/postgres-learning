@@ -52,7 +52,8 @@ router.get("/search/:by", async (req, res) => {
   const { by } = req.params
 
   try {
-    const qTxt = "SELECT * FROM restaurants WHERE name LIKE $1"
+    // const qTxt = "SELECT * FROM restaurants WHERE name LIKE $1"
+    const qTxt = "SELECT * FROM restaurants WHERE name ILIKE $1" // case sensitivity - false
     const { rows } = await query(qTxt, [`%${by}%`])
     res.send(rows)
 

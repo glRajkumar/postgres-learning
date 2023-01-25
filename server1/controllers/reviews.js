@@ -23,6 +23,19 @@ router.get("/", async (req, res) => {
   }
 })
 
+router.get("/restaurant/:id", async (req, res) => {
+  const { id } = req.params
+
+  try {
+    const qTxt = "SELECT * FROM reviews WHERE restaurant_id = $1"
+    const { rows } = await query(qTxt, [id])
+    res.send(rows)
+
+  } catch (err) {
+    res.status(400).json({ err, msg: "" })
+  }
+})
+
 router.post("/", async (req, res) => {
   const { restaurant_id, name, body, rating } = req.body
 
