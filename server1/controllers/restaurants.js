@@ -22,6 +22,17 @@ router.get("/", async (req, res) => {
   }
 })
 
+router.get("/average-rating", async (req, res) => {
+  try {
+    const qTxt = "SELECT restaurant_id, TRUNC(AVG(rating), 2) as average_rating, COUNT(*) as review_count FROM reviews GROUP BY restaurant_id ORDER BY average_rating DESC"
+    const { rows } = await query(qTxt)
+    res.send(rows)
+
+  } catch (err) {
+    res.status(400).json({ err, msg: "" })
+  }
+})
+
 router.get("/:id", async (req, res) => {
   const { id } = req.params
 

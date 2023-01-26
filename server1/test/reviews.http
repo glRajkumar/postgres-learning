@@ -14,8 +14,8 @@ POST {{host}}
 Content-Type: application/json
 
 {
-  "restaurant_id": "3",
-  "name": "Raj kumar", 
+  "restaurant_id": "8",
+  "name": "Raj", 
   "body": "Good", 
   "rating": 4
 }
