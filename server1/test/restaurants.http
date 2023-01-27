@@ -13,6 +13,10 @@ GET {{host}}/3
 GET {{host}}/average-rating
 
 
+### get restaurants by average rating - version 2
+GET {{host}}/v2/average-rating
+
+
 ### get restaurants by ceratin limit with some start point
 GET {{host}}/skip/3/limit/2
 
