@@ -9,6 +9,10 @@ GET {{host}}
 GET {{host}}/3
 
 
+### get specific restaurant by id - version 2
+GET {{host}}/v2/3
+
+
 ### get restaurants by average rating
 GET {{host}}/average-rating
 

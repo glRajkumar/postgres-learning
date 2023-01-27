@@ -57,6 +57,19 @@ router.get("/:id", async (req, res) => {
   }
 })
 
+router.get("/v2/:id", async (req, res) => {
+  const { id } = req.params
+
+  try {
+    const qTxt = "SELECT * FROM restaurants LEFT JOIN (SELECT restaurant_id, COUNT(*), TRUNC(AVG(rating),1) as average_rating FROM reviews GROUP BY restaurant_id ORDER BY average_rating DESC) reviews on restaurants.id = reviews.restaurant_id WHERE id = $1"
+    const { rows } = await query(qTxt, [id])
+    res.send(rows[0])
+
+  } catch (err) {
+    res.status(400).json({ err, msg: "" })
+  }
+})
+
 router.get("/skip/:offset/limit/:limit", async (req, res) => {
   const { offset, limit } = req.params
 
