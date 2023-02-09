@@ -5,3 +5,12 @@
 GET {{host}}
 
 
+### create managers
+POST {{host}}
+Content-Type: application/json
+
+{
+  "name": "Giri", 
+  "dept_id": "2"
+}
+

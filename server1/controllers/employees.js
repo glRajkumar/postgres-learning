@@ -23,4 +23,17 @@ router.get("/", async (req, res) => {
   }
 })
 
+router.post("/", async (req, res) => {
+  const { name, dept_id, project_id, manager_id } = req.body
+
+  try {
+    const qTxt = "INSERT INTO employees (name, dept_id, project_id, manager_id) values ($1, $2, $3, $4) returning id"
+    const { rows } = await query(qTxt, [name, dept_id, project_id, manager_id])
+    res.send(rows[0])
+
+  } catch (err) {
+    res.status(400).json({ err, msg: "" })
+  }
+})
+
 module.exports = router

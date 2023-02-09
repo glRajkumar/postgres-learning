@@ -5,3 +5,12 @@
 GET {{host}}
 
 
+### create projects
+POST {{host}}
+Content-Type: application/json
+
+{
+  "name": "Dev 3", 
+  "manager_id": "3"
+}
+

@@ -5,3 +5,14 @@
 GET {{host}}
 
 
+### create reviews
+POST {{host}}
+Content-Type: application/json
+
+{
+  "name": "Mari", 
+  "dept_id": "2",
+  "project_id": "2", 
+  "manager_id": "2"
+}
+

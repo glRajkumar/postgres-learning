@@ -5,3 +5,11 @@
 GET {{host}}
 
 
+### create departments
+POST {{host}}
+Content-Type: application/json
+
+{
+  "name": "Develepment"
+}
+
