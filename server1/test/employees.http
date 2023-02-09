@@ -1,0 +1,7 @@
+@host = http://localhost:5000/employees
+
+
+### get all employees
+GET {{host}}
+
+

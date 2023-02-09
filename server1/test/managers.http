@@ -1,0 +1,7 @@
+@host = http://localhost:5000/managers
+
+
+### get all managers
+GET {{host}}
+
+
