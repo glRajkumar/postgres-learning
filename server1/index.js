@@ -12,8 +12,18 @@ app.use(express.json())
 const restaurants = require('./controllers/restaurants')
 const reviews = require('./controllers/reviews')
 
+const departments = require('./controllers/departments')
+const employees = require('./controllers/employees')
+const managers = require('./controllers/managers')
+const projects = require('./controllers/projects')
+
 app.use("/restaurants", restaurants)
 app.use("/reviews", reviews)
+
+app.use("/departments", departments)
+app.use("/employees", employees)
+app.use("/managers", managers)
+app.use("/projects", projects)
 
 app.use((req, res, next) => {
   const error = new Error('Not Found')
