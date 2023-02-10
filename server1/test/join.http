@@ -1,0 +1,5 @@
+@host = http://localhost:5000/join
+
+
+### inner 
+GET {{host}}/inner

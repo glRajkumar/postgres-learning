@@ -17,6 +17,8 @@ const employees = require('./controllers/employees')
 const managers = require('./controllers/managers')
 const projects = require('./controllers/projects')
 
+const join = require('./controllers/join')
+
 app.use("/restaurants", restaurants)
 app.use("/reviews", reviews)
 
@@ -24,6 +26,8 @@ app.use("/departments", departments)
 app.use("/employees", employees)
 app.use("/managers", managers)
 app.use("/projects", projects)
+
+app.use("/join", join)
 
 app.use((req, res, next) => {
   const error = new Error('Not Found')
