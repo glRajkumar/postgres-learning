@@ -98,3 +98,23 @@ projects (
 | 2 | Raj 2   | 2 | 2 | 2 |
 | 3 | Vasanth | 2 | 2 | 2 |
 | 4 | Mari    | 2 | 2 | 2 |
+
+<br />
+
+### join samples
+
+### INNER JOIN
+
+`Query`
+```sql
+SELECT e.name AS emp_name, d.name AS dept_name FROM employees e INNER JOIN departments d ON e.dept_id = d.id
+```
+
+`Response`
+| emp_name | dept_name |
+| -------- | --------- |
+| Raj 1    | Production |
+| Raj 2    | Management |
+| Vasanth  | Management |
+| Mari     | Management |
+
