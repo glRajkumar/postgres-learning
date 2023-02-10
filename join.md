@@ -53,4 +53,48 @@ projects (
 
 <br />
 
+#### Data samples
 
+`departments`
+
+| id | name |
+| -- | ---- |
+| 1 | Production   |
+| 2 | Management   |
+| 3 | Supply chain |
+| 4 | Developers   |
+| 5 | Marketing    |
+| 6 | Recruitment  |
+| 7 | Develepment  |
+
+
+`managers`
+
+| id | name | dept_id |
+| -- | ---- | ------- |
+| 1 | Raj     | 1 |
+| 2 | Vasanth | 2 |
+| 3 | Laxmi   | 3 |
+| 4 | Guru    | 3 |
+| 5 | Reka    | 1 |
+| 6 | Bharath | 2 |
+| 7 | Giri    | 2 |
+
+
+`projects`
+
+| id | name | manager_id |
+| -- | ---- | ---------- |
+| 1 | Dev 1 | 1 |
+| 2 | Dev 2 | 2 |
+| 3 | Dev 3 | 3 |
+
+
+`employees`
+
+| id | name | dept_id | project_id | manager_id |
+| -- | ---- | ------- | ---------- | ---------- |
+| 1 | Raj 1   | 1 | 1 | 1 |
+| 2 | Raj 2   | 2 | 2 | 2 |
+| 3 | Vasanth | 2 | 2 | 2 |
+| 4 | Mari    | 2 | 2 | 2 |
