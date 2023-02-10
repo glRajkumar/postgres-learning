@@ -7,3 +7,5 @@ used `pg` package for managing db.
 
 ##### Joins
 <img src="./doc/PostgreSQL-Joins.png" alt="Postgresql joins" />
+
+You can check `join.md` file for sample data with explanation.
