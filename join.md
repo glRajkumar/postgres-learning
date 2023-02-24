@@ -118,3 +118,39 @@ SELECT e.name AS emp_name, d.name AS dept_name FROM employees e INNER JOIN depar
 | Vasanth  | Management |
 | Mari     | Management |
 
+
+### LEFT JOIN
+
+`Query`
+```sql
+SELECT e.name AS emp_name, d.name AS dept_name FROM employees e LEFT JOIN departments d ON e.dept_id = d.id
+```
+
+`Response`
+| emp_name | dept_name |
+| -------- | --------- |
+| Raj 1    | Production |
+| Raj 2    | Management |
+| Vasanth  | Management |
+| Mari     | Management |
+
+
+### RIGHT JOIN
+
+`Query`
+```sql
+SELECT e.name AS emp_name, d.name AS dept_name FROM employees e RIGHT JOIN departments d ON e.dept_id = d.id
+```
+
+`Response`
+| emp_name | dept_name |
+| -------- | --------- |
+| Raj 1    | Production   |
+| Raj 2    | Management   |
+| Vasanth  | Management   |
+| Mari     | Management   |
+| null     | Marketing    |
+| null     | Recruitment  |
+| null     | Developers   |
+| null     | Supply chain |
+| null     | Develepment  |
