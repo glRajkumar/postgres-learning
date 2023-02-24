@@ -3,3 +3,11 @@
 
 ### inner 
 GET {{host}}/inner
+
+
+### left
+GET {{host}}/left
+
+
+### right
+GET {{host}}/right
