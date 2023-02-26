@@ -104,6 +104,7 @@ projects (
 ### join samples
 
 ### INNER JOIN
+(only common in both tables)
 
 `Query`
 ```sql
@@ -120,6 +121,7 @@ SELECT e.name AS emp_name, d.name AS dept_name FROM employees e INNER JOIN depar
 
 
 ### LEFT JOIN
+(Inner join + all datas from Left table)
 
 `Query`
 ```sql
@@ -136,6 +138,7 @@ SELECT e.name AS emp_name, d.name AS dept_name FROM employees e LEFT JOIN depart
 
 
 ### RIGHT JOIN
+(Inner join + all datas from Right table)
 
 `Query`
 ```sql
@@ -154,3 +157,25 @@ SELECT e.name AS emp_name, d.name AS dept_name FROM employees e RIGHT JOIN depar
 | null     | Developers   |
 | null     | Supply chain |
 | null     | Develepment  |
+
+
+### Multiple JOINs
+(combined multiple joins)
+
+`Query`
+```sql
+SELECT e.name AS emp_name, d.name AS dept_name, 
+m.name AS manager_name, p.name AS project_name 
+FROM employees e 
+JOIN departments d ON e.dept_id = d.id
+JOIN managers m ON e.manager_id = m.id
+JOIN projects p ON e.project_id = p.id
+```
+
+`Response`
+| emp_name | dept_name  | manager_name | project_name |
+| -------- | ---------  | ------------ | ------------ |
+| Raj 1    | Production | Raj     | Dev 1 |
+| Raj 2    | Management | Vasanth | Dev 2 |
+| Vasanth  | Management | Vasanth | Dev 2 |
+| Mari     | Management | Vasanth | Dev 2 |

@@ -11,3 +11,7 @@ GET {{host}}/left
 
 ### right
 GET {{host}}/right
+
+
+### 
+GET {{host}}/multiple
