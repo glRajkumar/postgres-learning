@@ -246,3 +246,19 @@ SELECT e.name AS emp_name, d.name AS dept_name FROM employees e CROSS JOIN depar
 
 <br />
 in above example we have, 4 employees and 7 depts so we got 28 record.
+
+
+### NATURAL JOIN
+(no condition required) (condition will be set by sql) (try to avoid this join)
+
+`Query`
+
+```sql
+SELECT e.name AS emp_name, d.name AS dept_name FROM employees e NATURAL JOIN departments d
+```
+
+`Response`
+| emp_name | dept_name |
+| -------- | --------- |
+
+got empty res []

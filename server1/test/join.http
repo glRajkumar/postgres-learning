@@ -23,3 +23,7 @@ GET {{host}}/full
 
 ### cross
 GET {{host}}/cross
+
+
+### natural
+GET {{host}}/natural
