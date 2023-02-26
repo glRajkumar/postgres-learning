@@ -13,5 +13,13 @@ GET {{host}}/left
 GET {{host}}/right
 
 
-### 
+### multiple joins combined
 GET {{host}}/multiple
+
+
+### full
+GET {{host}}/full
+
+
+### cross
+GET {{host}}/cross

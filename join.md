@@ -179,3 +179,70 @@ JOIN projects p ON e.project_id = p.id
 | Raj 2    | Management | Vasanth | Dev 2 |
 | Vasanth  | Management | Vasanth | Dev 2 |
 | Mari     | Management | Vasanth | Dev 2 |
+
+
+### FULL JOIN
+(everything from both table) (inner + left + right)
+
+`Query`
+```sql
+SELECT e.name AS emp_name, d.name AS dept_name FROM employees e FULL JOIN departments d ON e.dept_id = d.id
+```
+
+`Response`
+| emp_name | dept_name |
+| -------- | --------- |
+| Raj 1    | Production   |
+| Raj 2    | Management   |
+| Vasanth  | Management   |
+| Mari     | Management   |
+| null     | Marketing    |
+| null     | Recruitment  |
+| null     | Developers   |
+| null     | Supply chain |
+| null     | Develepment  |
+
+
+### CROSS JOIN (Cartesian product)
+(no condition required) (each record will associate with other record)
+
+`Query`
+
+```sql
+SELECT e.name AS emp_name, d.name AS dept_name FROM employees e CROSS JOIN departments d
+```
+
+`Response`
+| emp_name | dept_name |
+| -------- | --------- |
+| Raj 1    | Production    |
+| Raj 2    | Production    |
+| Vasanth  | Production    |
+| Mari     | Production    |
+| Raj 1    | Management    |
+| Raj 2    | Management    |
+| Vasanth  | Management    |
+| Mari     | Management    |
+| Raj 1    | Supply chain  |
+| Raj 2    | Supply chain  |
+| Vasanth  | Supply chain  |
+| Mari     | Supply chain  |
+| Raj 1    | Developers    |
+| Raj 2    | Developers    |
+| Vasanth  | Developers    |
+| Mari     | Developers    |
+| Raj 1    | Marketing     |
+| Raj 2    | Marketing     |
+| Vasanth  | Marketing     |
+| Mari     | Marketing     |
+| Raj 1    | Recruitment   |
+| Raj 2    | Recruitment   |
+| Vasanth  | Recruitment   |
+| Mari     | Recruitment   |
+| Raj 1    | Develepment   |
+| Raj 2    | Develepment   |
+| Vasanth  | Develepment   |
+| Mari     | Develepment   |
+
+<br />
+in above example we have, 4 employees and 7 depts so we got 28 record.

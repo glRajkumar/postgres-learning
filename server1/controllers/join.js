@@ -74,4 +74,37 @@ router.get("/multiple", async (req, res) => {
   }
 })
 
+router.get("/full", async (req, res) => {
+  try {
+    const qTxt = `
+    SELECT e.name AS emp_name, d.name AS dept_name 
+    FROM employees e 
+    FULL JOIN departments d 
+    ON e.dept_id = d.id
+    `
+
+    const { rows } = await query(qTxt)
+    res.send(rows)
+
+  } catch (err) {
+    res.status(400).json({ err, msg: "" })
+  }
+})
+
+router.get("/cross", async (req, res) => {
+  try {
+    const qTxt = `
+    SELECT e.name AS emp_name, d.name AS dept_name 
+    FROM employees e 
+    CROSS JOIN departments d 
+    `
+
+    const { rows } = await query(qTxt)
+    res.send(rows)
+
+  } catch (err) {
+    res.status(400).json({ err, msg: "" })
+  }
+})
+
 module.exports = router
