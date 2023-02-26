@@ -17,6 +17,7 @@ const employees = require('./controllers/employees')
 const managers = require('./controllers/managers')
 const projects = require('./controllers/projects')
 
+const families = require('./controllers/families')
 const join = require('./controllers/join')
 
 app.use("/restaurants", restaurants)
@@ -27,6 +28,7 @@ app.use("/employees", employees)
 app.use("/managers", managers)
 app.use("/projects", projects)
 
+app.use("/families", families)
 app.use("/join", join)
 
 app.use((req, res, next) => {

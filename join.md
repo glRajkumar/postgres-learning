@@ -262,3 +262,31 @@ SELECT e.name AS emp_name, d.name AS dept_name FROM employees e NATURAL JOIN dep
 | -------- | --------- |
 
 got empty res []
+
+<br />
+<br />
+
+New table added to demonstrate self join named `families`.
+
+`families`
+```sql
+families (
+  id BIGSERIAL NOT NULL PRIMARY KEY, 
+  name VARCHAR(50) NOT NULL, 
+  parent_id BIGSERIAL
+);
+```
+
+#### Data samples for families
+
+| id | name | parent_id |
+| -- | ---- | --------- |
+| 1 | Raj    | null |
+| 2 | Kumar  | null |
+| 3 | Ashok  | 1    |
+| 4 | Vikram | 1    |
+| 5 | Rahul  | 2    |
+| 6 | Kanan  | 2    |
+| 7 | Mari   | null |
+
+<br />

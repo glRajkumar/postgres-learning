@@ -1,0 +1,16 @@
+@host = http://localhost:5000/families
+
+
+### get all families
+GET {{host}}
+
+
+### create family
+POST {{host}}
+Content-Type: application/json
+
+{
+  "name": "Raj", 
+  "parent_id": "4"
+}
+
