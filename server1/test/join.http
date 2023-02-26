@@ -27,3 +27,7 @@ GET {{host}}/cross
 
 ### natural
 GET {{host}}/natural
+
+
+### self
+GET {{host}}/self

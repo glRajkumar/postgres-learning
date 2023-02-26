@@ -290,3 +290,18 @@ families (
 | 7 | Mari   | null |
 
 <br />
+
+### SELF JOIN
+
+`Query`
+```sql
+SELECT child.name AS child_name, parent.name AS parent_name FROM families child JOIN families parent ON child.parent_id = parent.id
+```
+
+`Response`
+| child_name | parent_name |
+| ---------- | ----------- |
+| 3 | Ashok  | Raj   |
+| 4 | Vikram | Raj   |
+| 5 | Rahul  | Kumar |
+| 6 | Kanan  | Kumar |

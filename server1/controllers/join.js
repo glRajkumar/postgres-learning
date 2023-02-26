@@ -123,4 +123,22 @@ router.get("/natural", async (req, res) => {
   }
 })
 
+
+router.get("/self", async (req, res) => {
+  try {
+    const qTxt = `
+      SELECT child.name AS child_name, parent.name AS parent_name 
+      FROM families child
+      JOIN families parent
+      ON child.parent_id = parent.id
+    `
+
+    const { rows } = await query(qTxt)
+    res.send(rows)
+
+  } catch (err) {
+    res.status(400).json({ err, msg: "" })
+  }
+})
+
 module.exports = router
